@@ -1,0 +1,20 @@
+<?php
+
+use  \Drupal\Core\Field\BaseFieldDefinition;
+/**
+ * @file
+ * Contains pseudo_field.module.
+ */
+function pseudo_field_entity_base_field_info(\Drupal\Core\Entity\EntityTypeInterface $entity_type){
+    $fields = [];
+    $fields['custom_field'] = BaseFieldDefinition::create('pseudo')
+      ->setLabel(t('The text'))
+      ->setDescription(t('A text property added by mymodule.'))
+      ->setComputed(TRUE)->setDisplayConfigurable('view', TRUE)->setDisplayOptions('view', array(
+        'label' => 'hidden',
+        'type' => 'author',
+        'weight' => 0,
+      ));
+
+    return $fields;
+}
