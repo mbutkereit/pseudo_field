@@ -11,7 +11,7 @@ use Drupal\Core\Field\FieldItemBase;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
 
 /**
- * Plugin implementation of the 'table' field type.
+ * Plugin implementation of the 'custom field' field type.
  *
  * @FieldType(
  *   id = "pseudo",
